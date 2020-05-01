@@ -30,7 +30,7 @@ import App from '../App';
 const apiMock = new MockAdapter(api);
 
 const wait = (amount = 0): Promise<void> => {
-  return new Promise((resolve) => setTimeout(resolve, amount));
+  return new Promise(resolve => setTimeout(resolve, amount));
 };
 
 const actWait = async (amount = 0): Promise<void> => {
@@ -185,7 +185,7 @@ describe('Dashboard', () => {
 
     await actWait(500);
 
-    fireEvent.click(getByText('Importar'));
+    fireEvent.click(getByText('Import'));
 
     await actWait();
 
@@ -195,7 +195,7 @@ describe('Dashboard', () => {
   test('should be able to upload a file', async () => {
     const { getByText, getByTestId } = render(<App />);
 
-    fireEvent.click(getByText('Importar'));
+    fireEvent.click(getByText('Import'));
 
     await actWait();
 
