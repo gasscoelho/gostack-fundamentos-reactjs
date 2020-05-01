@@ -18,6 +18,8 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
         {
           // Todo
         }
+        <Link to="/">Listagem</Link>
+        <Link to="/import">Import</Link>
       </nav>
     </header>
   </Container>
